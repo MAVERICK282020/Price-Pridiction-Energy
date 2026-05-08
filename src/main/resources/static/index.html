@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Energy Monitoring System</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<header>
+    <h1>Smart Energy Monitoring System</h1>
+    <p>Java + Spring Boot + IoT + ML-style prediction + NLP chatbot</p>
+</header>
+
+<main>
+    <section class="cards">
+        <div class="card">
+            <h2>Today's Usage</h2>
+            <p id="todayKwh">Loading...</p>
+        </div>
+        <div class="card">
+            <h2>Estimated Bill</h2>
+            <p id="bill">Loading...</p>
+        </div>
+        <div class="card">
+            <h2>Prediction</h2>
+            <p id="prediction">Loading...</p>
+        </div>
+    </section>
+
+    <section class="panel">
+        <h2>Live Energy Chart</h2>
+        <canvas id="energyChart"></canvas>
+    </section>
+
+    <section class="panel grid2">
+        <div>
+            <h2>Add IoT Reading</h2>
+            <input id="deviceId" placeholder="Device ID" value="HOME-001" />
+            <input id="voltage" type="number" placeholder="Voltage" value="230" />
+            <input id="currentAmp" type="number" step="0.01" placeholder="Current Amp" />
+            <input id="powerWatt" type="number" step="0.01" placeholder="Power Watt" />
+            <input id="energyKwh" type="number" step="0.01" placeholder="Energy kWh" />
+            <button onclick="addReading()">Save Reading</button>
+            <p id="saveStatus"></p>
+        </div>
+        <div>
+            <h2>Energy Chatbot</h2>
+            <div id="chatBox" class="chat-box"></div>
+            <input id="chatInput" placeholder="Ask about usage, bill, tips..." />
+            <button onclick="askBot()">Ask</button>
+        </div>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
