@@ -183,3 +183,12 @@ Description:
 - Integrated IoT-style sensor data collection using REST APIs and optional MQTT.
 - Implemented prediction and anomaly detection modules to identify abnormal usage patterns.
 - Built a chatbot and dashboard for energy-saving insights, reports, and estimated billing.
+
+## API Testing & Forecast Validation
+
+The Smart Energy Monitoring System prediction API was tested using Postman automated post-response scripts.
+
+### Tested Endpoint
+
+```http
+GET /api/energy/predict?deviceId=HOME-001
